@@ -3,7 +3,7 @@ import requests
 from requests.structures import CaseInsensitiveDict
 from csv import DictWriter
 
-def get_contact_details(MatterID: int) -> dict:
+def get_matter_details(MatterID: int) -> dict:
     "Given a rocketmatter MatterID, fetch Matter Data from their API"
     url = "https://rm30artemis.rocketmatter.net/eller_law/API_V2/Matters.svc/json/Get"
 
@@ -28,7 +28,7 @@ def get_contact_details(MatterID: int) -> dict:
 matters = []
 
 for id in [4314,2979,3426,4310,1554,4313,2905,3564,4317,780,4312,2758,4316]:
-    resp_data = get_contact_details(id)
+    resp_data = get_matter_details(id)
     if resp_data:
         matters.append(resp_data)
 
