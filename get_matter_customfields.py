@@ -1,4 +1,3 @@
-from itsdangerous import json
 import requests
 from requests.structures import CaseInsensitiveDict
 from csv import DictWriter
